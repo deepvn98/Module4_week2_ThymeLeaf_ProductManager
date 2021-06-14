@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh Sách Sản Phẩm</title>
+</head>
+<body>
+<table border="1 solid" width="70%">
+    <tr>
+        <th>Name SP</th>
+        <th>Price</th>
+        <th>Discribe</th>
+        <th>Producer</th>
+    </tr>
+    <tr th:each="p:${list}">
+        <td th:text="${p.name}"></td>
+        <td th:text="${p.price}"></td>
+        <td th:text="${p.discribe}"></td>
+        <td th:text="${p.producer}"></td>
+
+    </tr>
+
+</table>
+
+</body>
+</html>
